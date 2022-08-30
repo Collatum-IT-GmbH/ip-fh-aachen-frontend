@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ip-fh-aachen-frontend';
+  counter: number = 0;
+
+  increaseCounter() {
+    this.counter++;
+  }
+  decreaseCounter() {
+    this.counter--;
+  }
 }
