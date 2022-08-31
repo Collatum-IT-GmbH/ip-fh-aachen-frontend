@@ -1,0 +1,61 @@
+<div class="wrapper">
+  <div class="spacer-input-blocks"></div>
+  <h1 class="center-alignment-header">
+    Erstellen Sie eine Person!
+  </h1>
+  <div class="spacer-input-blocks"></div>
+  <div class="spacer-input-blocks"></div>
+  <div class="flex-container">
+    <div class="inner-flex-container">
+      <h2>
+        Angaben zur Person
+      </h2>
+      <mat-form-field appearance="fill">
+        <mat-label>Geburtsdatum</mat-label>
+        <input matInput [(ngModel)]="this.person.dateOfBirth">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Nachname</mat-label>
+        <input matInput [(ngModel)]="this.person.familyName">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Vorname</mat-label>
+        <input matInput [(ngModel)]="this.person.givenName">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>E-Mail</mat-label>
+        <input matInput [(ngModel)]="this.person.email">
+      </mat-form-field>
+    </div>
+    <div class="inner-flex-container">
+      <h2>
+        Angaben zur Adresse
+      </h2>
+      <mat-form-field appearance="fill">
+        <mat-label>PLZ</mat-label>
+        <input matInput [(ngModel)]="this.person.address.zip">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Stadt</mat-label>
+        <input matInput [(ngModel)]="this.person.address.city">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Straße</mat-label>
+        <input matInput [(ngModel)]="this.person.address.street">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Hausnummer</mat-label>
+        <input matInput [(ngModel)]="this.person.address.houseNumber">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="spacer-input-blocks"></div>
+  <div class="inner-flex-container">
+    <button mat-flat-button
+            color="primary"
+            class="submit-button font-style-button"
+            (click)="this.submitPerson()">
+      Absenden
+    </button>
+  </div>
+</div>
