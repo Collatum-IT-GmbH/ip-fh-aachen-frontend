@@ -19,7 +19,7 @@ export class InputInterfaceComponent implements OnInit {
 
   submitPerson() {
     this.printPersonToConsole();
-    this.ipFhService.submitPerson(this.person);
+    this.ipFhService.submitPerson(this.person).subscribe();
   }
 
   printPersonToConsole() {

@@ -15,12 +15,7 @@ export class IpFhService {
     private httpClient: HttpClient,
   ) {}
 
-  submitPerson(person: Person): Observable<any>{
-    const formData = new FormData();
-    formData.append(
-      "personDto",
-      new Blob([JSON.stringify(person)])
-    );
-    return this.httpClient.post(`${SERVICE_API_URL} /person/createPerson`, formData);
+  submitPerson(person: Person): Observable<Person>{
+    return this.httpClient.post<Person>(`${SERVICE_API_URL}/person/createPerson`, person);
   }
 }
