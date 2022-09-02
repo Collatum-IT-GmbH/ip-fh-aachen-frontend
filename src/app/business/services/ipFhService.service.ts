@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpHandler} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {environment} from "../../../environments/environment";
-import {Person} from "../../models/models";
-
+import {Person} from "../models/models";
+import {Observable} from "rxjs";
 
 const SERVICE_API_URL = environment.SERVICE_API_URL
 
@@ -11,18 +11,16 @@ const SERVICE_API_URL = environment.SERVICE_API_URL
 })
 export class IpFhService {
 
-
-  // httpClient = new HttpClient(this.httpHandler);
   constructor(
-    // public httpHandler = HttpHandler
+    private httpClient: HttpClient,
   ) {}
 
-  submitPerson(person: Person) {
+  submitPerson(person: Person): Observable<any>{
     const formData = new FormData();
     formData.append(
       "personDto",
       new Blob([JSON.stringify(person)])
     );
-    // this.httpClient.post<Person>(`${SERVICE_API_URL} /person/createPerson`, formData);
+    return this.httpClient.post(`${SERVICE_API_URL} /person/createPerson`, formData);
   }
 }
