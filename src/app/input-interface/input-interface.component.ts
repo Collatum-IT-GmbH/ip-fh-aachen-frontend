@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Person} from "../models/models";
+import {Person} from "../business/models/models";
 import {IpFhService} from "../business/services/ipFhService.service";
 
 @Component({
@@ -8,10 +8,11 @@ import {IpFhService} from "../business/services/ipFhService.service";
   styleUrls: ['./input-interface.component.css']
 })
 export class InputInterfaceComponent implements OnInit {
+  person = new Person();
 
-  person = new Person;
-  ipFhService = new IpFhService();
-  constructor() {}
+  constructor(
+    private ipFhService: IpFhService
+  ) {}
 
   ngOnInit(): void {
   }
