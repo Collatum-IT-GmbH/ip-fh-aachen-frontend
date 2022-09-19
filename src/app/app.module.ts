@@ -10,7 +10,9 @@ import {MatButtonModule} from "@angular/material/button";
 import {HttpClientModule} from "@angular/common/http";
 import { LandingComponent } from './landing/landing.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
+import {MatIconModule} from "@angular/material/icon";
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HeaderComponent } from './header/header.component';
     HttpClientModule,
     MatInputModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
