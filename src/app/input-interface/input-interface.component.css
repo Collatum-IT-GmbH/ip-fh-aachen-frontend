@@ -10,10 +10,6 @@
   transform: translateX(-50%);
 }
 
-.font-style-button {
-  color: white;
-  font-size: 20px;
-}
 
 .header{
   position: absolute;
@@ -57,11 +53,4 @@
   height: 50px;
 }
 
-.submit-button {
-  border-radius: 10px;
 
-  width: 150px;
-  height: 50px;
-
-  cursor: pointer;
-}

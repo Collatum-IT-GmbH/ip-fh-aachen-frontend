@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.css']
+  styleUrls: [
+    './landing.component.css',
+    '../shared/shared-styles.scss'
+  ]
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  navigateTo(input: String) {
+    this.router.navigate(['/' + input]).then();
+  }
 }
