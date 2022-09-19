@@ -10,12 +10,14 @@ import {MatButtonModule} from "@angular/material/button";
 import {HttpClientModule} from "@angular/common/http";
 import { LandingComponent } from './landing/landing.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputInterfaceComponent,
-    LandingComponent
+    LandingComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
