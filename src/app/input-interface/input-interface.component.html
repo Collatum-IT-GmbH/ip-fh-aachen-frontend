@@ -53,9 +53,16 @@
   <div class="inner-flex-container">
     <button mat-flat-button
             color="primary"
-            class="submit-button font-style-button"
+            class="main-button font-style-button"
             (click)="this.submitPerson()">
       Absenden
+    </button>
+    <div class="spacer-input-blocks"></div>
+    <button mat-flat-button
+            color="primary"
+            class="main-button font-style-button"
+            (click)="this.navigateTo('landing')">
+      Landing Page
     </button>
   </div>
 </div>
