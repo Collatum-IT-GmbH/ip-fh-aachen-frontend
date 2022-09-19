@@ -18,32 +18,7 @@ export class InputInterfaceComponent implements OnInit {
   }
 
   submitPerson() {
-    this.printPersonToConsole();
+    console.log(this.person);
     this.ipFhService.submitPerson(this.person).subscribe();
-  }
-
-  printPersonToConsole() {
-    console.log(
-      "Persönliche Informationen:"
-      + "\n"
-      + this.person.dateOfBirth
-      + "\n"
-      + this.person.familyName
-      + "\n"
-      + this.person.givenName
-      + "\n"
-      + this.person.email
-      + "\n"
-      + "\n"
-      + "Die Adresse lautet:"
-      + "\n"
-      + this.person.address.zip
-      + "\n"
-      + this.person.address.city
-      + "\n"
-      + this.person.address.street
-      + "\n"
-      + this.person.address.houseNumber
-    );
   }
 }
