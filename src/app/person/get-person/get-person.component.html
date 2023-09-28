@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <h1 class="center-alignment-item">
+    Fragen Sie eine Person ab!
+  </h1>
+  <div class="center-alignment-item">
+    <mat-form-field class="example-form-field">
+      <mat-label>Id</mat-label>
+      <input matInput type="text" [(ngModel)]="id">
+      <button matSuffix mat-icon-button aria-label="Clear" (click)="this.submitGetPerson()">
+        <mat-icon>send</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+</div>

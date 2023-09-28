@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <h1 class="center-alignment-item">
+    Abgefragte Person
+  </h1>
+  <div *ngIf="(person$ | async) as receivedPerson" class="flex-box">
+    <a>Vorname: {{receivedPerson.firstName}}</a>
+    <a>Nachname: {{receivedPerson.lastName}}</a>
+    <a>E-Mail: {{receivedPerson.email}}</a>
+    <a>Geburtsdatum: {{receivedPerson.dateOfBirth}}</a>
+    <a>Adresse: {{receivedPerson.address.zip}} {{receivedPerson.address.city}}, {{receivedPerson.address.street}} {{receivedPerson.address.houseNumber}}</a>
+  </div>
+</div>

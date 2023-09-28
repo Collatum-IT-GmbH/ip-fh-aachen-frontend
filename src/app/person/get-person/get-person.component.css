@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 75px);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.center-alignment-item {
+  text-align: center;
+}
+
+.submit-get-person {
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}

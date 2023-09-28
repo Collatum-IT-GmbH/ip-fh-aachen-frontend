@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { CreatePersonComponent } from './create-person/create-person.component';
+import { CreatePersonComponent } from './person/create-person/create-person.component';
 import {FormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from "@angular/material/input";
@@ -14,13 +14,19 @@ import { HeaderComponent } from './components/header/header.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatGridListModule} from "@angular/material/grid-list";
+import { GetPersonComponent } from './person/get-person/get-person.component';
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import { GetPersonDialogComponent } from './person/get-person/get-person-dialog/get-person-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
     AppComponent,
     CreatePersonComponent,
     LandingComponent,
-    HeaderComponent
+    HeaderComponent,
+    GetPersonComponent,
+    GetPersonDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,9 @@ import {MatGridListModule} from "@angular/material/grid-list";
     AppRoutingModule,
     MatIconModule,
     MatMenuModule,
-    MatGridListModule
+    MatGridListModule,
+    MatProgressBarModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

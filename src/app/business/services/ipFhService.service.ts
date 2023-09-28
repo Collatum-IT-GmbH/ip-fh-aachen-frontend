@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {environment} from "../../../environments/environment";
 import {Person} from "../models/models";
 import {Observable} from "rxjs";
@@ -13,9 +13,17 @@ export class IpFhService {
 
   constructor(
     private httpClient: HttpClient,
-  ) {}
+  ) {
+  }
 
-  submitPerson(person: Person): Observable<Person>{
+  submitPerson(person: Person): Observable<Person> {
     return this.httpClient.post<Person>(`${SERVICE_API_URL}/person`, person);
+  }
+
+  getPerson(email: string): Observable<Person> {
+    return this.httpClient.get<Person>(`${SERVICE_API_URL}/person`, {
+        params: new HttpParams().append('id', email)
+      }
+    )
   }
 }

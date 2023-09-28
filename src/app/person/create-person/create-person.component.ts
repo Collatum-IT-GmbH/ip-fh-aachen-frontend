@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {Person} from "../business/models/models";
-import {IpFhService} from "../business/services/ipFhService.service";
-import {Router} from "@angular/router";
+import {Person} from "../../business/models/models";
+import {IpFhService} from "../../business/services/ipFhService.service";
 
 @Component({
   selector: 'app-create-person',
   templateUrl: './create-person.component.html',
   styleUrls: [
     './create-person.component.css',
-    '../shared/shared-styles.scss'
+    '../../shared/shared-styles.scss'
   ]
 })
 export class CreatePersonComponent implements OnInit {

@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.center-alignment-item {
+  text-align: center;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: column;
+}
