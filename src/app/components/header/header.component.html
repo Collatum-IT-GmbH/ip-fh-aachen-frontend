@@ -3,13 +3,13 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item (click)="this.navigateTo('landing')">
+    <button mat-menu-item [routerLink]="'landing'" [routerLinkActive]="'active-route'">
       <mat-icon>home</mat-icon>
       <span>Home</span>
     </button>
-    <button mat-menu-item (click)="this.navigateTo('input-interface')">
+    <button mat-menu-item [routerLink]="'create-person'" [routerLinkActive]="'active-route'">
       <mat-icon>person_add</mat-icon>
-      <span>Create Person</span>
+      <span>Person erstellen</span>
     </button>
   </mat-menu>
 </div>

@@ -4,18 +4,17 @@ import {IpFhService} from "../business/services/ipFhService.service";
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-input-interface',
-  templateUrl: './input-interface.component.html',
+  selector: 'app-create-person',
+  templateUrl: './create-person.component.html',
   styleUrls: [
-    './input-interface.component.css',
+    './create-person.component.css',
     '../shared/shared-styles.scss'
   ]
 })
-export class InputInterfaceComponent implements OnInit {
+export class CreatePersonComponent implements OnInit {
   person = new Person();
 
   constructor(
-    private router: Router,
     private ipFhService: IpFhService
   ) {}
 
@@ -24,9 +23,5 @@ export class InputInterfaceComponent implements OnInit {
 
   submitPerson() {
     this.ipFhService.submitPerson(this.person).subscribe();
-  }
-
-  navigateTo(input: String) {
-    this.router.navigate(['/' + input]).then();
   }
 }

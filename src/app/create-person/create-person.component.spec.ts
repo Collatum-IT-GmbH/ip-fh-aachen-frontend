@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InputInterfaceComponent } from './input-interface.component';
+import { CreatePersonComponent } from './create-person.component';
 
-describe('InputInterfaceComponent', () => {
-  let component: InputInterfaceComponent;
-  let fixture: ComponentFixture<InputInterfaceComponent>;
+describe('CreatePersonComponent', () => {
+  let component: CreatePersonComponent;
+  let fixture: ComponentFixture<CreatePersonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InputInterfaceComponent ]
+      declarations: [ CreatePersonComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(InputInterfaceComponent);
+    fixture = TestBed.createComponent(CreatePersonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
