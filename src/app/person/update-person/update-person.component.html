@@ -1,0 +1,68 @@
+<div class="wrapper">
+  <h1 class="center-alignment-item">
+    Fragen Sie eine Person ab, um diese zu ändern!
+  </h1>
+  <div class="center-alignment-item">
+    <mat-form-field class="example-form-field">
+      <mat-label>Id</mat-label>
+      <input matInput type="text" [(ngModel)]="id">
+      <button matSuffix mat-icon-button aria-label="Clear" (click)="this.submitGetPerson()">
+        <mat-icon>send</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <div *ngIf="(person$ | async) as receivedPerson">
+    <div class="flex-container">
+      <div class="inner-flex-container">
+        <h2>
+          Angaben zur Person
+        </h2>
+        <mat-form-field appearance="fill">
+          <mat-label>Geburtsdatum</mat-label>
+          <input matInput [(ngModel)]="receivedPerson.dateOfBirth">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Nachname</mat-label>
+          <input matInput [(ngModel)]="receivedPerson.lastName">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Vorname</mat-label>
+          <input matInput [(ngModel)]="receivedPerson.firstName">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>E-Mail</mat-label>
+          <input matInput [(ngModel)]="receivedPerson.email">
+        </mat-form-field>
+      </div>
+      <div class="inner-flex-container">
+        <h2>
+          Angaben zur Adresse
+        </h2>
+        <mat-form-field appearance="fill">
+          <mat-label>PLZ</mat-label>
+          <input matInput [(ngModel)]="receivedPerson.address.zip">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Stadt</mat-label>
+          <input matInput [(ngModel)]="receivedPerson.address.city">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Straße</mat-label>
+          <input matInput [(ngModel)]="receivedPerson.address.street">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Hausnummer</mat-label>
+          <input matInput [(ngModel)]="receivedPerson.address.houseNumber">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="center-alignment-item">
+      <button mat-flat-button
+              color="primary"
+              class="submit-create-person"
+              (click)="this.submitUpdatePerson(receivedPerson)">
+        Absenden
+      </button>
+    </div>
+  </div>
+</div>

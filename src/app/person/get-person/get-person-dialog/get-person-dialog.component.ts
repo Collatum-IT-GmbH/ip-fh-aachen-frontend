@@ -9,6 +9,4 @@ import {Person} from "../../../business/models/models";
 })
 export class GetPersonDialogComponent {
   @Input() person$: Observable<Person> | undefined;
-
-
 }

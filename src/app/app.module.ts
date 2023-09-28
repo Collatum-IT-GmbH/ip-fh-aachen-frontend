@@ -18,6 +18,7 @@ import { GetPersonComponent } from './person/get-person/get-person.component';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import { GetPersonDialogComponent } from './person/get-person/get-person-dialog/get-person-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import { UpdatePersonComponent } from './person/update-person/update-person.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatDialogModule} from "@angular/material/dialog";
     LandingComponent,
     HeaderComponent,
     GetPersonComponent,
-    GetPersonDialogComponent
+    GetPersonDialogComponent,
+    UpdatePersonComponent
   ],
   imports: [
     BrowserModule,

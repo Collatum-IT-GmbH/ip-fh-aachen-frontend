@@ -26,4 +26,8 @@ export class IpFhService {
       }
     )
   }
+
+  updatePerson(person: Person): Observable<Person> {
+    return this.httpClient.put<Person>(`${SERVICE_API_URL}/person`, person);
+  }
 }
