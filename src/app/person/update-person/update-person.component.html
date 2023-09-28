@@ -58,8 +58,14 @@
     </div>
     <div class="center-alignment-item">
       <button mat-flat-button
+              color="warn"
+              class="submit-action-person"
+              (click)="this.submitDeletePerson()">
+        Löschen
+      </button>
+      <button mat-flat-button
               color="primary"
-              class="submit-create-person"
+              class="submit-action-person"
               (click)="this.submitUpdatePerson(receivedPerson)">
         Absenden
       </button>

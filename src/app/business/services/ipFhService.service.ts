@@ -20,14 +20,21 @@ export class IpFhService {
     return this.httpClient.post<Person>(`${SERVICE_API_URL}/person`, person);
   }
 
-  getPerson(email: string): Observable<Person> {
+  getPerson(id: string): Observable<Person> {
     return this.httpClient.get<Person>(`${SERVICE_API_URL}/person`, {
-        params: new HttpParams().append('id', email)
+        params: new HttpParams().append('id', id)
       }
     )
   }
 
   updatePerson(person: Person): Observable<Person> {
     return this.httpClient.put<Person>(`${SERVICE_API_URL}/person`, person);
+  }
+
+  deletePerson(id: string): Observable<Person> {
+    return this.httpClient.delete<Person>(`${SERVICE_API_URL}/person`, {
+        params: new HttpParams().append('id', id)
+      }
+    )
   }
 }

@@ -1,7 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {IpFhService} from "../../business/services/ipFhService.service";
-import {Person} from "../../business/models/models";
-import {Observable} from "rxjs";
 import {MatDialog} from "@angular/material/dialog";
 import {GetPersonDialogComponent} from "./get-person-dialog/get-person-dialog.component";
 

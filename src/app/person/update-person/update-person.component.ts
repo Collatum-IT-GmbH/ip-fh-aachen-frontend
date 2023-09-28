@@ -10,6 +10,7 @@ import {Person} from "../../business/models/models";
 })
 export class UpdatePersonComponent {
   id: string = "";
+  idToDelete: string = "";
   person$: Observable<Person> | undefined;
 
 
@@ -18,10 +19,16 @@ export class UpdatePersonComponent {
   }
 
   submitGetPerson() {
+    this.idToDelete = this.id;
     this.person$ = this.ipFhService.getPerson(this.id);
   }
 
   submitUpdatePerson(person: Person) {
    this.ipFhService.updatePerson(person).subscribe();
+  }
+
+  submitDeletePerson() {
+    this.ipFhService.deletePerson(this.idToDelete).subscribe();
+    this.person$ = undefined;
   }
 }
