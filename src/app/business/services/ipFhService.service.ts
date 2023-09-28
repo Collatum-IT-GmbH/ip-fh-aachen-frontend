@@ -16,6 +16,6 @@ export class IpFhService {
   ) {}
 
   submitPerson(person: Person): Observable<Person>{
-    return this.httpClient.post<Person>(`${SERVICE_API_URL}/person/createPerson`, person);
+    return this.httpClient.post<Person>(`${SERVICE_API_URL}/person`, person);
   }
 }

@@ -1,12 +1,7 @@
-<app-header></app-header>
-<div class="spacer-header"></div>
 <div class="wrapper">
-  <div class="spacer-input-blocks"></div>
-  <h1 class="center-alignment-header">
+  <h1 class="center-alignment-item">
     Erstellen Sie eine Person!
   </h1>
-  <div class="spacer-input-blocks"></div>
-  <div class="spacer-input-blocks"></div>
   <div class="flex-container">
     <div class="inner-flex-container">
       <h2>
@@ -18,11 +13,11 @@
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Nachname</mat-label>
-        <input matInput [(ngModel)]="this.person.familyName">
+        <input matInput [(ngModel)]="this.person.lastName">
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Vorname</mat-label>
-        <input matInput [(ngModel)]="this.person.givenName">
+        <input matInput [(ngModel)]="this.person.firstName">
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>E-Mail</mat-label>
@@ -51,11 +46,10 @@
       </mat-form-field>
     </div>
   </div>
-  <div class="spacer-input-blocks"></div>
-  <div class="inner-flex-container">
+  <div class="center-alignment-item">
     <button mat-flat-button
             color="primary"
-            class="main-button font-style-button"
+            class="submit-create-person"
             (click)="this.submitPerson()">
       Absenden
     </button>

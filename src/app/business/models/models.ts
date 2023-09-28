@@ -5,36 +5,36 @@ export class Address {
   houseNumber: string;
 
   constructor(
-    _zip: string = "",
-    _city: string = "",
-    _street: string = "",
-    _houseNumber: string = ""
+    zip: string = "",
+    city: string = "",
+    street: string = "",
+    houseNumber: string = ""
   ) {
-    this.zip = _zip;
-    this.city = _city;
-    this.street = _street;
-    this.houseNumber = _houseNumber;
+    this.zip = zip;
+    this.city = city;
+    this.street = street;
+    this.houseNumber = houseNumber;
   }
 }
 
 export class Person {
   dateOfBirth: string;
-  familyName: string;
-  givenName: string;
+  lastName: string;
+  firstName: string;
   email: string;
   address: Address;
 
   constructor(
-    _dateOfBirth: string = "",
-    _familyName: string = "",
-    _givenName: string = "",
-    _email: string = "",
-    _address: Address = new Address()
+    dateOfBirth: string = "",
+    firstName: string = "",
+    lastName: string = "",
+    email: string = "",
+    address: Address = new Address()
   ) {
-    this.dateOfBirth = _dateOfBirth;
-    this.familyName = _familyName;
-    this.givenName = _givenName;
-    this.email = _email;
-    this.address = _address;
+    this.dateOfBirth = dateOfBirth;
+    this.lastName = lastName;
+    this.firstName = firstName;
+    this.email = email;
+    this.address = address;
   }
 }

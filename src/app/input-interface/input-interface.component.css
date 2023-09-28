@@ -1,20 +1,14 @@
-
 .wrapper {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 75px);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.center-alignment-header {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-
-.header{
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
+.center-alignment-item {
+  text-align: center;
 }
 
 .flex-container {
@@ -22,6 +16,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .inner-flex-container {
@@ -34,23 +29,11 @@
   padding-right: 50px;
 }
 
-.input-field {
-  border: 3px solid black;
-
+.submit-create-person {
+  border-radius: 10px;
   width: 150px;
   height: 50px;
-
-  margin: 10px;
-  padding: 10px;
-
-  text-align: center;
-  justify-items: center;
-
-  cursor: text;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
 }
-
-.spacer-input-blocks {
-  height: 50px;
-}
-
-

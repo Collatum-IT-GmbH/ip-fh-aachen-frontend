@@ -23,7 +23,6 @@ export class InputInterfaceComponent implements OnInit {
   }
 
   submitPerson() {
-    console.log(this.person);
     this.ipFhService.submitPerson(this.person).subscribe();
   }
 
