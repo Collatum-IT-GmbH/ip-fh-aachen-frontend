@@ -1,0 +1,57 @@
+<div>
+  <h1>
+    Erstellen Sie eine Person!
+  </h1>
+  <div>
+    <div>
+      <h2>
+        Angaben zur Person
+      </h2>
+      <mat-form-field appearance="fill">
+        <mat-label>Geburtsdatum</mat-label>
+        <input matInput [(ngModel)]="person.dateOfBirth">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Nachname</mat-label>
+        <input matInput [(ngModel)]="person.lastName">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Vorname</mat-label>
+        <input matInput [(ngModel)]="person.firstName">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>E-Mail</mat-label>
+        <input matInput [(ngModel)]="person.email">
+      </mat-form-field>
+    </div>
+    <div>
+      <h2>
+        Angaben zur Adresse
+      </h2>
+      <mat-form-field appearance="fill">
+        <mat-label>PLZ</mat-label>
+        <input matInput [(ngModel)]="person.address.zip">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Stadt</mat-label>
+        <input matInput [(ngModel)]="person.address.city">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Straße</mat-label>
+        <input matInput [(ngModel)]="person.address.street">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Hausnummer</mat-label>
+        <input matInput [(ngModel)]="person.address.houseNumber">
+      </mat-form-field>
+    </div>
+    <div>
+      <button (click)="showPersonMethod()">Absenden</button>
+    </div>
+    <div *ngIf="showPerson">
+      <app-display-person
+        [person]="person"
+      ></app-display-person>
+    </div>
+  </div>
+</div>
